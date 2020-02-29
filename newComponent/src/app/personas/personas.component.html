@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-persona></app-persona>
+      <label>Titulo</label>
+      <input type="text" class="form-control" (input)="onModificarAlumno($event)">
+      {{tituloAlumno}}<br/>
+      <label>Texto</label>
+      <input type="text" class="form-control" [(ngModel)]="texto">
+      {{texto}}
+      <h1>listado de Alumnos</h1><br />
+      <button class="btn btn-primary" [disabled]="!agregarAlumno" (click)="onCrearAlumno()">Agregar Alumno</button>
+      <br />
+      <p id="listaAlumnos">{{agregarAlumnoStatus}}</p>
+      <app-alumno></app-alumno>
+    </div>
+  </div>
+</div>
