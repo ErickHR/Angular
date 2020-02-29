@@ -1,0 +1,10 @@
+<form class="item">
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre...."
+    #txtnombre>
+
+  <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido...."
+      #txtapellido>
+    <button type="submit" class="btn btn-primary"
+    (click)="onCrear(txtapellido)" [disabled]="!boton">+</button>
+</form>
+  {{mensaje}}
